@@ -1,0 +1,28 @@
+cvia/
+├─ .devcontainer/ # VS Code – optional container definition
+├─ .github/workflows/ # CI pipelines (build, test, deploy)
+├─ backend/
+│ ├─ app/
+│ │ ├─ api/ # FastAPI routers
+│ │ ├─ core/ # settings, security, utils
+│ │ ├─ models/ # SQLModel / Pydantic models
+│ │ ├─ services/ # business‑logic (chat, cv, billing)
+│ │ └─ main.py # FastAPI entry‑point
+│ ├─ celery_worker.py
+│ ├─ Dockerfile
+│ └─ requirements.txt
+├─ frontend/
+│ ├─ public/
+│ ├─ src/
+│ │ ├─ app/ # Next App Router pages & layouts
+│ │ ├─ components/ # reusable UI atoms & molecules
+│ │ ├─ features/chat/ # chat hooks, UI & api client
+│ │ ├─ lib/api.ts # typed fetcher ⇄ FastAPI
+│ │ └─ styles/
+│ ├─ tailwind.config.ts
+│ ├─ next.config.js
+│ ├─ tsconfig.json
+│ └─ Dockerfile
+├─ docker-compose.yml
+├─ .env # local‑only (ignored)
+└─ README.md
